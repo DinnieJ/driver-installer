@@ -1,7 +1,7 @@
 package driver
 
 import (
-	"github.com/DinnieJ/selenium-embedded/internal/command"
+	"github.com/DinnieJ/driver-installer/internal/command"
 )
 
 type DriverInstaller interface {
@@ -11,7 +11,6 @@ type DriverInstaller interface {
 
 type ChromeSeleniumDriver struct {
 	ChromeDriverDownloader
-	*command.ChromeCmdRunner
 }
 
 var chromeCmdRunner command.ChromeCmdRunner = command.ChromeCmdRunner{Runner: &command.CommandRunner{}}

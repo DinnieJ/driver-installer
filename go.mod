@@ -1,4 +1,4 @@
-module github.com/DinnieJ/selenium-embedded
+module github.com/DinnieJ/driver-installer
 
 go 1.24.2
 

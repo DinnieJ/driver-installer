@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/DinnieJ/selenium-embedded/internal/command"
+	"github.com/DinnieJ/driver-installer/internal/command"
 )
 
 func TestCommandRunnerSuccess(t *testing.T) {

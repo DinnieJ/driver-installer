@@ -3,8 +3,8 @@ package command_test
 import (
 	"testing"
 
-	"github.com/DinnieJ/selenium-embedded/internal/command"
-	. "github.com/DinnieJ/selenium-embedded/internal/command/mock"
+	"github.com/DinnieJ/driver-installer/internal/command"
+	. "github.com/DinnieJ/driver-installer/internal/command/mock"
 )
 
 func TestGetVersionChromeSuccess(t *testing.T) {
