@@ -11,12 +11,12 @@ type ChromeCmdRunner struct {
 
 var ERR_NO_VERSION_FOUND = fmt.Errorf("found no version in binary")
 
-var ERR_NO_CHOME_BINARY_FOUND = fmt.Errorf("no chrome binary found")
+var ERR_NO_CHROME_BINARY_FOUND = fmt.Errorf("no chrome binary found")
 
 func (c *ChromeCmdRunner) FetchChromeVersion() (string, error) {
 	strOutput, err := c.Run("google-chrome-stable", "--version")
 	if err != nil {
-		return "", ERR_NO_CHOME_BINARY_FOUND
+		return "", ERR_NO_CHROME_BINARY_FOUND
 	}
 	versionReg := regexp.MustCompile(`(?m)(\d*\.\d*\.\d*\.\d*)`)
 

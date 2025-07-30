@@ -25,14 +25,14 @@ func TestGetVersionChromeSuccess(t *testing.T) {
 
 func TestGetVersionChromeWhenFindNoBinary(t *testing.T) {
 	mockCmdRunner := new(MockCmdRunner)
-	mockCmdRunner.On("Run", "google-chrome-stable", "--version").Return("", command.ERR_NO_CHOME_BINARY_FOUND)
+	mockCmdRunner.On("Run", "google-chrome-stable", "--version").Return("", command.ERR_NO_CHROME_BINARY_FOUND)
 	chromeCmdRunner := &command.ChromeCmdRunner{
 		Runner: mockCmdRunner,
 	}
 
 	_, err := chromeCmdRunner.FetchChromeVersion()
-	if err != command.ERR_NO_CHOME_BINARY_FOUND {
-		t.Fatalf("expected ERR_NO_CHOME_BINARY_FOUND, got %s", err)
+	if err != command.ERR_NO_CHROME_BINARY_FOUND {
+		t.Fatalf("expected ERR_NO_CHROME_BINARY_FOUND, got %s", err)
 	}
 }
 
